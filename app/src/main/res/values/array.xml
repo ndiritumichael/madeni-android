@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="descriptionSpinnerArray">
+        <item>-- Debt Description --</item>
+        <item>Personal</item>
+        <item>Bills</item>
+        <item>Custom</item>
+    </string-array>
+    <string-array name="typeSpinnerArray">
+        <item>-- Debt Type: Pick One* --</item>
+        <item>Debt You Owe</item>
+        <item>Debt Owed To You</item>
+    </string-array>
+    <string-array name="nudgeArray">
+        <item>SMS</item>
+        <item>WhatsApp</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="nudgeValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="nudgeArrayPref">
+        <item>SMS</item>
+        <item>WhatsApp</item>
+        <item>Other</item>
+        <item>Always ask</item>
+    </string-array>
+
+    <string-array name="nudgeValuesPref">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

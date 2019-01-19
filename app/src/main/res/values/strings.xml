@@ -1,0 +1,174 @@
+<resources>
+    <!-- General -->
+    <string name="app_name">Madeni</string>
+    <string name="str_app_name">Madeni App</string>
+    <string name="str_currency">KSH</string>
+    <string name="beta_disabled">Feature disabled in beta.</string>
+
+    <!-- Splash -->
+    <string name="splash_image">Splash Image</string>
+
+    <!-- Setup -->
+    <string name="hello">Hello!</string>
+    <string name="protect_the_app">Protect the app</string>
+    <string name="one_more_thing">One more thing…</string>
+    <string name="str_permissions">
+        "Some features of Madeni require special permissions to work, as follows;\n\n"
+        "<b>• Contacts\n</b>"
+        "Allows the app to select from the stored phone contacts.\n\n"
+        "<b>• Storage\n</b>"
+        "Allows the app to create and retrieve data backups.
+    </string>
+
+    <!-- PasscodeActivity -->
+    <string name="title_activity_passcode">Passcode</string>
+    <string name="passcode_hint">Default passcode is: 1234</string>
+
+    <!-- RecoveryActivity -->
+    <string name="title_activity_recovery">Passcode Recovery</string>
+
+    <!-- Nav Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Madeni</string>
+    <string name="nav_header_subtitle">What\'s the debt today?</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_preferences">Preferences</string>
+    <string name="nav_new_debt">New Debt</string>
+    <string name="nav_view_debts">View Debts</string>
+    <string name="nav_debt_summary">Debt Summary</string>
+    <string name="nav_help">Help</string>
+    <string name="communicate">Communicate</string>
+    <string name="share">Share</string>
+    <string name="feedback">Feedback</string>
+
+    <!-- MainActivity -->
+    <string name="swipe_out_from_right_to_begin">Swipe out from left to begin.</string>
+    <string name="welcome_card_info">Welcome back, %s.</string>
+    <string name="debts_card_info">You owe %1$d debts\n(%2$s %3$,.2f)\nand are owed %4$d debts\n(%2$s %5$,.2f).</string>
+    <string name="summary_card_info">Net debt:\n%s %+,.2f in %d debts.</string>
+    <string name="view">VIEW</string>
+
+    <!-- NewDebtActivity -->
+    <string name="title_activity_new_debt">New Debt</string>
+    <string name="person_s_name">Person\'s Name*</string>
+    <string name="phone_number_07">Phone Number (07…)</string>
+    <string name="amount_owed">Amount Owed*</string>
+    <string name="debt_description">Debt Description</string>
+    <string name="fields_marked_with_are_required">Fields marked with * are required.</string>
+
+    <!-- DebtsActivity -->
+    <string name="title_activity_debts">Debts</string>
+    <string name="str_you_owe">You owe:</string>
+    <string name="str_you_are_owed">You are owed:</string>
+    <string name="card_image">Card Image</string>
+    <string name="overflow_button">Overflow Button</string>
+    <string name="card_amt">%1$s %2$s</string>
+    <string name="amount_paid">Amount Paid</string>
+
+    <!-- SummaryActivity -->
+    <string name="title_activity_summary">Summary</string>
+    <string name="summary_count"><b>%d debts</b>,</string>
+    <string name="summary_sum"><i>Totalling:</i>\n<b>%1$s %2$,.2f</b>,</string>
+    <string name="summary_date">On <b>%s</b>.</string>
+    <string name="summary_dates">Between <b>%1$s</b>\nand <b>%2$s</b>.</string>
+    <string name="owed_by_you_per">Owed by you: %d%%</string>
+    <string name="owed_to_you_per">Owed to you: %d%%</string>
+    <string name="net_debt_summ" formatted="true">Net debt: <b>%1$s %2$,.2f</b></string>
+
+    <!-- HelpActivity -->
+    <string name="title_activity_help">Help</string>
+    <string name="help_text">
+        "<b>Madeni App.\n</b>"
+        "So that you don't have to keep track of your own debts anymore.\n\n"
+
+        "<u><i>Madeni</i></u> - which translates to 'debts' in Swahili - is the name of this "
+        "must-have tool. Presented in stunning detail with a clean material design interface, this "
+        "app helps you keep track of debts you owe and are owed. You don't have to remember each of"
+        " your debts anymore. Madeni will do that for you.\n\n"
+
+        "<b><i>How to use the app.\n</i></b>"
+        "Acquaint yourself with the features of Madeni.\n\n"
+
+        "<b>The Home Screen.\n\n</b>"
+
+        "The Home Screen is the first screen seen upon opening the app. On it, you can see a brief"
+        "overview of your debts - presented as cards -  without having to go too far into the app."
+        "This shows information drawn from your stored debts and is designed to be understood at a"
+        "glance. This can be refreshed by using the button at the bottom-right corner of the"
+        "screen or swiping downwards. The rest of the app can be accessed by clicking on the cards"
+        "or via the navigation drawer - accessed by swiping out from the left side of the screen.\n\n"
+
+        "<b><i>1. New Debt.\n\n</i></b>"
+
+        "On this page, you can store a new debt by filling the given fields with the relevant data"
+        "and clicking the button at the bottom-right of the screen to store the debt. You will be"
+        "notified on the success or failure of the operation.\n\n"
+
+        "<b><i>2. View Debts.\n\n</i></b>"
+
+        "On this page you can manage your stored debts. From here you have the ability to view,"
+        "edit, and delete debts. You can choose between three views; All Debts, Debts You Owe and"
+        "Debts owed to you. It can be refreshed by swiping downwards or clicking the button in the"
+        "bottom-right corner of the screen.\n\n"
+
+        "<b><i>3. Debt Summary.\n\n</i></b>"
+
+        "On this page you are treated to a brief summary based on your stored debts similar to"
+        "that on the Home Screen. However, this one is more detailed and provides a more in-depth"
+        "look at the status of your debts. Like the Home Screen, it can be refreshed by swiping"
+        "downwards or clicking the button in the bottom-right corner of the screen.\n\n"
+
+        "<b><i>4. Help.\n\n"</i></b>
+
+        "On this page you get a description of the app and a brief guide on its features. Press"
+        "the button near the top to send feedback to the developer via e-mail.\n\n"
+
+        "<b><i>Preferences.\n\n</i></b>"
+
+        "On this page, accessed from a menu on the top-right of the each screen, you can "
+        "change the various app settings.\n\n"
+
+        "<b>Communicate.\n</b>"
+        "This sub-menu contains social options with regard to the app.\n\n"
+
+        "<b><i>5. Share.\n\n</i></b>"
+
+        "This option enables you to share the download link for this app with others via various"
+        "apps you may have installed on your device.\n\n"
+
+        "<b><i>6. Send Feedback.\n\n</i></b>"
+
+        "This option allows you to send feedback to the developer via e-mail.\n\n"
+    </string>
+
+    <!-- Share -->
+    <string name="str_app_description"><b><i>Madeni App;</i></b>\nSo that you don\'t have to keep track of your own debts anymore.\nGet it here:\n%s</string>
+    <string name="share_link"><i>https://rebrand.ly/madeni-beta</i></string>
+
+    <!-- Feedback -->
+    <string name="str_support_email">plenjo15@gmail.com</string>
+    <string name="str_feedback_subject">Madeni App Feedback</string>
+    <string name="str_subject_header">Hello TypicalGeek. I have tried your app and this is what I think.</string>
+
+    <!-- PreferenceActivity -->
+    <string name="title_activity_preferences">Preferences</string>
+    <string name="str_credits">Special thanks to alpha testers - Ian, Jane and Marvin - and the folks over at StackOverFlow.</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="hint">Hint</string>
+    <string name="enter_your_passcode">Enter your Passcode</string>
+    <string name="forgot_passcode">Forgot Passcode?</string>
+    <string name="create_new_passcode">Create a new passcode:</string>
+    <string name="submit">Submit</string>
+    <string name="recoveryHint"> </string>
+    <string name="str_crash_subject">RE: Madeni Crash Report</string>
+    <string name="str_crash_header"><![CDATA[Hello TypicalGeek, In the course of using Madeni App, it crashed. Details below.\n<--Please include phone model, android version and a brief description of what you were doing when the app crashed -->]]></string>
+
+    <!--Shortcuts-->
+    <string name="shortcut_disabled">Shortcut is disabled</string>
+    <string name="shortcut_label_long">Create a new debt</string>
+    <string name="shortcut_label_short">New debt</string>
+    <string name="edition">prerelease-beta</string>
+    <string name="str_restore_backups">If you have any previous Madeni backups stored on this device, you can restore them here. You can also later restore them manually, but be warned that doing so will clear your current database.</string>
+</resources>

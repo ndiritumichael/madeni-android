@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="0dp"
+        card_view:contentPadding="4dp"
+        card_view:cardBackgroundColor="?attr/cardBack">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_perc_paid_all"
+                android:layout_centerVertical="true"
+                android:layout_width="64dp"
+                android:layout_height="64dp">
+                <ProgressBar
+                    android:id="@+id/pbPercentagePaidAll"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:indeterminate="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:progressDrawable="@drawable/circle_small"
+                    android:layout_centerInParent="true"
+                    android:progress="57"
+                    android:rotation="-90"/>
+
+                <TextView
+                    android:id="@+id/tv_percentage_paid_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="57%"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_debt_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/layout_perc_paid_all"
+                android:layout_toStartOf="@id/btnOverflowAll"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:textSize="16sp"
+                android:textColor="?attr/textColorSec"/>
+
+            <TextView
+                android:id="@+id/tv_amount_owed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/layout_perc_paid_all"
+                android:layout_toStartOf="@id/btnOverflow"
+                android:layout_below="@id/tv_debt_type"
+                android:layout_marginStart="16dp"
+                android:textSize="16sp"
+                android:textColor="?attr/textColorPri"/>
+
+            <TextView
+                android:id="@+id/tv_person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/layout_perc_paid_all"
+                android:layout_toStartOf="@id/btnOverflow"
+                android:layout_below="@+id/tv_amount_owed"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="14sp"
+                android:textColor="?attr/textColorSec"/>
+
+            <ImageButton
+                android:id="@+id/btnOverflowAll"
+                android:layout_width="56dp"
+                android:layout_height="64dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="#00000000"
+                android:clickable="true"
+                android:contentDescription="@string/overflow_button"
+                android:focusable="true"
+                android:tint="?attr/cardBackInverse"
+                app:srcCompat="@drawable/ic_overflow"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

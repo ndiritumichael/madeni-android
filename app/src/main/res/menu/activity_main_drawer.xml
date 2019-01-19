@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_new_debt"
+            android:icon="@drawable/ic_new_debt"
+            android:title="@string/title_activity_new_debt" />
+        <item
+            android:id="@+id/nav_view_debts"
+            android:icon="@drawable/ic_view_debts"
+            android:title="@string/title_activity_debts"/>
+        <item
+            android:id="@+id/nav_debt_summary"
+            android:icon="@drawable/ic_debt_summary"
+            android:title="@string/title_activity_summary" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help"
+            android:title="@string/title_activity_help" />
+    </group>
+
+    <item android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="@string/share"
+                android:enabled="true"/>
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_feedback"
+                android:title="@string/feedback" />
+        </menu>
+    </item>
+
+</menu>

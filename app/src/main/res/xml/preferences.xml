@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Preferences"
+    android:key="preferences">
+    <PreferenceScreen
+        android:title="General"
+        android:key="general"
+        android:icon="?pref_general_icon">
+
+        <EditTextPreference
+            android:title="Username"
+            android:key="username"
+            android:maxLength="10"
+            android:summary="Set or change your username."
+            android:textColor="?attr/textColorPri"
+            android:textColorHint="?attr/textColorSec"/>
+
+        <RingtonePreference
+            android:title="Notification Tone"
+            android:summary="Set your notification tone."
+            android:key="notification"
+            android:showSilent="true"
+            android:ringtoneType="notification"/>
+
+        <ListPreference
+            android:title="Nudge"
+            android:summary="Default Nudge app (Experimental)."
+            android:key="nudge"
+            android:enabled="true"
+            android:defaultValue="3"
+            android:entries="@array/nudgeArrayPref"
+            android:entryValues="@array/nudgeValuesPref"/>
+
+        <SwitchPreference
+            android:title="App Signature"
+            android:defaultValue="false"
+            android:summaryOff="Outgoing messages will not be signed."
+            android:summaryOn="Outgoing messages will be signed."
+            android:key="signature"/>
+
+        <Preference
+            android:title="Clear Database"
+            android:summary="Delete all stored debts."
+            android:key="clear"/>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="App Security"
+        android:key="appSecurity"
+        android:icon="?pref_security_icon">
+
+        <SwitchPreference
+            android:title="App Lock"
+            android:defaultValue="false"
+            android:summaryOff="App lock is disabled."
+            android:summaryOn="App lock is enabled."
+            android:key="appLock"/>
+
+        <EditTextPreference
+            android:title="Passcode"
+            android:inputType="numberPassword"
+            android:hint="Enter New Passcode"
+            android:defaultValue="1234"
+            android:maxLength="12"
+            android:enabled="true"
+            android:summary="Set or change your passcode."
+            android:key="passcode"
+            android:dependency="appLock"
+            android:textColor="?attr/textColorPri"
+            android:textColorHint="?attr/textColorSec"/>
+
+        <EditTextPreference
+            android:title="Passcode Hint"
+            android:inputType="text"
+            android:hint="Enter New Passcode"
+            android:defaultValue="@string/passcode_hint"
+            android:maxLength="16"
+            android:enabled="true"
+            android:summary="Set or Change your passcode hint."
+            android:key="passcodeHint"
+            android:dependency="appLock"
+            android:textColor="?attr/textColorPri"
+            android:textColorHint="?attr/textColorSec"/>
+
+        <EditTextPreference
+            android:title="Security Question"
+            android:inputType="textCapSentences"
+            android:maxLength="32"
+            android:summary="Used to recover your passcode.\nWorks with security answer."
+            android:hint="Enter security question"
+            android:key="securityQ"
+            android:dependency="appLock"
+            android:textColor="?attr/textColorPri"
+            android:textColorHint="?attr/textColorSec"/>
+
+        <EditTextPreference
+            android:title="Security Answer"
+            android:inputType="text"
+            android:maxLength="16"
+            android:summary="Used to recover your passcode.\nWorks with security question."
+            android:hint="Enter answer to security question"
+            android:key="securityA"
+            android:dependency="appLock"
+            android:textColor="?attr/textColorPri"
+            android:textColorHint="?attr/textColorSec"/>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="User Interface"
+        android:key="userInterface"
+        android:icon="?pref_interface_icon">
+
+        <SwitchPreference
+            android:title="Dark Theme"
+            android:summaryOff="Dark theme is disabled."
+            android:summaryOn="Dark theme is enabled."
+            android:key="darkTheme"
+            android:defaultValue="false"/>
+
+        <EditTextPreference
+            android:title="Currency"
+            android:inputType="textCapCharacters"
+            android:summary="Does NOT convert values."
+            android:hint="e.g KSH, USD..."
+            android:defaultValue="KSH"
+            android:key="currency"
+            android:maxLength="3"
+            android:textColor="?attr/textColorPri"
+            android:textColorHint="?attr/textColorSec"/>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Backup/Sync"
+        android:key="backupSync"
+        android:icon="?pref_backup_icon">
+        <PreferenceCategory
+            android:title="Device">
+            <Preference
+                android:title="Backup Now"
+                android:key="deviceBackupNow"
+                android:summary="Back up database to device."/>
+
+            <Preference
+                android:title="Restore Device Backup"
+                android:key="deviceRestore"
+                android:summary="Restore backed up data."/>
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:title="Online">
+            <Preference
+                android:title="Backup Now"
+                android:key="cloudBackupNow"
+                android:summary="Back up database and settings to device."
+                android:enabled="false"/>
+
+            <Preference
+                android:title="Restore Cloud Backup"
+                android:key="cloudRestore"
+                android:summary="Restore backed up data."
+                android:enabled="false"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Info/About"
+        android:key="infoAbout"
+        android:icon="?pref_about_icon">
+        <Preference
+            android:title="Help"
+            android:summary="View help."
+            android:key="help">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.typicalgeek.madeni"
+                android:targetClass="com.typicalgeek.madeni.HelpActivity"/>
+        </Preference>
+
+        <Preference
+            android:title="Credits"
+            android:summary="View app credits."
+            android:key="credits"
+            android:enabled="true"/>
+
+        <Preference
+            android:title="App Version"
+            android:key="version"
+            android:summary="@string/edition"/>
+    </PreferenceScreen>
+</PreferenceScreen>

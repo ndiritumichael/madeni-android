@@ -1,0 +1,140 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColor">@color/text_color_primary_selector</item>
+        <item name="android:textColorPrimary">@color/text_color_primary_selector</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary_selector</item>
+        <item name="android:textColorPrimaryInverse">@color/text_color_primary_inverse_selector</item>
+        <item name="android:textColorSecondaryInverse">@color/text_color_secondary_inverse_selector</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+        <item name="cardBack">@color/cardBack</item>
+        <item name="cardBackInverse">@color/cardBackInverse</item>
+        <item name="textColorPri">@color/textColorPrimary</item>
+        <item name="textColorSec">@color/textColorSecondary</item>
+        <item name="colorButtonNormal">@color/cardBack</item>
+        <item name="backColor">@color/background</item>
+        <item name="backColorInverse">@color/backgroundInverse</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogCustom</item>
+        <item name="textColorHinted">@color/textColorSecondary</item>
+        <item name="android:popupTheme">@style/AppTheme.PopupOverlay</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:fontFamily">@font/nunito_extra_light</item>
+        <item name="pref_general_icon">@drawable/ic_pref_general_dark</item>
+        <item name="pref_security_icon">@drawable/ic_pref_security_dark</item>
+        <item name="pref_interface_icon">@drawable/ic_pref_interface_dark</item>
+        <item name="pref_backup_icon">@drawable/ic_pref_backup_dark</item>
+        <item name="pref_about_icon">@drawable/ic_pref_about_dark</item>
+    </style>
+
+    <style name="AppTheme.Dark" parent="Theme.AppCompat" >
+        <item name="colorPrimary">@color/colorPrimaryInverse</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkInverse</item>
+        <item name="colorAccent">@color/colorAccentInverse</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDarkInverse</item>
+        <item name="android:windowBackground">@color/backgroundInverse</item>
+        <item name="android:textColor">@color/text_color_primary_inverse_selector</item>
+        <item name="android:textColorPrimary">@color/text_color_primary_inverse_selector</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary_inverse_selector</item>
+        <item name="android:textColorPrimaryInverse">@color/text_color_primary_selector</item>
+        <item name="android:textColorSecondaryInverse">@color/text_color_secondary_selector</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkInverse</item>
+        <item name="cardBack">@color/cardBackInverse</item>
+        <item name="cardBackInverse">@color/cardBack</item>
+        <item name="textColorPri">@color/textColorPrimaryInverse</item>
+        <item name="textColorSec">@color/textColorSecondaryInverse</item>
+        <item name="colorButtonNormal">@color/cardBackInverse</item>
+        <item name="backColor">@color/backgroundInverse</item>
+        <item name="backColorInverse">@color/background</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogCustom.Dark</item>
+        <item name="textColorHinted">@color/textColorSecondaryInverse</item>
+        <item name="android:popupTheme">@style/AppTheme.Dark.PopupOverlay</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+        <item name="android:fontFamily">@font/nunito_extra_light</item>
+        <item name="pref_general_icon">@drawable/ic_pref_general_light</item>
+        <item name="pref_security_icon">@drawable/ic_pref_security_light</item>
+        <item name="pref_interface_icon">@drawable/ic_pref_interface_light</item>
+        <item name="pref_backup_icon">@drawable/ic_pref_backup_light</item>
+        <item name="pref_about_icon">@drawable/ic_pref_about_light</item>
+    </style >
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:textColorPrimary">@color/text_color_primary_selector</item>
+    </style>
+
+    <style name="AppTheme.Dark.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/backgroundInverse</item>
+        <item name="android:textColorPrimary">@color/text_color_primary_inverse_selector</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.BlendStatusBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <!--<item name="dialogTheme">@style/AlertDialogCustom</item>-->
+        <item name="android:alertDialogTheme">@style/AlertDialogCustom</item>
+    </style >
+
+    <style name="AppTheme.Dark.NoActionBar.BlendStatusBar" parent="AppTheme.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/backgroundDark</item>
+        <item name="android:statusBarColor">@color/backgroundDark</item>
+        <item name="android:navigationBarColor">@color/backgroundDark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+        <item name="fontFamily">@font/nunito_extra_light</item>
+    </style>
+
+    <!--<style name="Theme.AppCompat.Light.NoActionBar.Blend">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/splashBlend</item>
+        <item name="android:navigationBarColor">@color/splashBlend</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:fontFamily">@font/nunito_extra_light</item>
+    </style  >
+
+    <style name="Theme.AppCompat.NoActionBar.Blend">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/splashBlendInverse</item>
+        <item name="android:navigationBarColor">@color/splashBlendInverse</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+        <item name="android:fontFamily">@font/nunito_extra_light</item>
+    </style>-->
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:background">@color/background</item>
+        <item name="android:fontFamily">@font/nunito_extra_light</item>
+    </style>
+
+    <style name="AlertDialogCustom.Dark" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/textColorPrimaryInverse</item>
+        <item name="android:background">@color/backgroundDark</item>
+        <item name="android:fontFamily">@font/nunito_extra_light</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:fontFamily">@font/nunito_extra_light</item>
+    </style>
+
+    <style name="AppTheme.Dark.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:fontFamily">@font/nunito_extra_light</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:fontFamily">@font/nunito_light</item>
+    </style>
+</resources>
