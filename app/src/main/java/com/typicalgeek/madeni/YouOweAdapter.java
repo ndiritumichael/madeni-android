@@ -11,6 +11,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -237,7 +238,7 @@ public class YouOweAdapter extends RecyclerView.Adapter<YouOweAdapter.MyViewHold
                                                 @Override
                                                 public void onClick(DialogInterface dialog, int which) {
                                                     try {
-                                                        Float payment = Float.parseFloat(etPay.getText().toString().trim());
+                                                        float payment = Float.parseFloat(etPay.getText().toString().trim());
                                                         if (payment == 0)
                                                             Toast.makeText(view.getContext(), "Enter a value", Toast.LENGTH_SHORT).show();
                                                         else {
@@ -257,10 +258,18 @@ public class YouOweAdapter extends RecyclerView.Adapter<YouOweAdapter.MyViewHold
                                 }
                             })
                                     .setNegativeButton("CLOSE", null)
-                                    .setTitle("Payments")
-                                    .setView(paymtsView)
-                                    .create().show();
-                            PaymentsAdapter paymentsAdapter = new PaymentsAdapter(view.getContext(), DebtsActivity.dbGetFilteredPayments(DatabaseHelper.PAYMENTS_COL_1, d.getDebtID()));
+                                    .setTitle("Payments");
+
+                            Payment[] paymentsArray = DebtsActivity.dbGetFilteredPayments(DatabaseHelper.PAYMENTS_COL_1, d.getDebtID());
+                            if (paymentsArray.length != 0) alertDialogBuilder.setView(paymtsView);
+                            else {
+                                TextView myMsg = new TextView(paymtsView.getContext());
+                                myMsg.setText("No payments made yet.");
+                                myMsg.setGravity(Gravity.CENTER);
+                                alertDialogBuilder.setView(myMsg);
+                            }
+                            alertDialogBuilder.create().show();
+                            PaymentsAdapter paymentsAdapter = new PaymentsAdapter(view.getContext(), paymentsArray);
                             recyclePay.setAdapter(paymentsAdapter);
                             LinearLayoutManager manager = new LinearLayoutManager(view.getContext());
                             recyclePay.setLayoutManager(manager);

@@ -11,6 +11,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -238,22 +239,22 @@ public class AllDebtsAdapter extends RecyclerView.Adapter<AllDebtsAdapter.MyView
                                     final EditText etPay = payView.findViewById(R.id.etAmountPaid);
                                     new AlertDialog.Builder(new ContextThemeWrapper(view.getContext(), DebtsActivity.dialogThemeID))
                                             .setPositiveButton("ADD", new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            try {
-                                                Float payment = Float.parseFloat(etPay.getText().toString().trim());
-                                                if (payment == 0)
-                                                    Toast.makeText(view.getContext(), "Enter a value", Toast.LENGTH_SHORT).show();
-                                                else {
-                                                    new DebtsActivity().addPayment(view.getContext(), new Payment(d.getDebtID(), payment,
-                                                            new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date())));
-                                                    alertDialogBuilder.create().show();
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    try {
+                                                        float payment = Float.parseFloat(etPay.getText().toString().trim());
+                                                        if (payment == 0)
+                                                            Toast.makeText(view.getContext(), "Enter a value", Toast.LENGTH_SHORT).show();
+                                                        else {
+                                                            new DebtsActivity().addPayment(view.getContext(), new Payment(d.getDebtID(), payment,
+                                                                    new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date())));
+                                                            mListener.refreshAll();
+                                                        }
+                                                    }catch (Exception e){
+                                                        Toast.makeText(view.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                                                    }
                                                 }
-                                            }catch (Exception e){
-                                                Toast.makeText(view.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
-                                            }
-                                        }
-                                    })
+                                            })
                                             .setNegativeButton("CANCEL", null)
                                             .setTitle("Add Payment")
                                             .setView(payView)
@@ -261,10 +262,18 @@ public class AllDebtsAdapter extends RecyclerView.Adapter<AllDebtsAdapter.MyView
                                 }
                             })
                                     .setNegativeButton("CLOSE", null)
-                                    .setTitle("Payments")
-                                    .setView(paymentsView)
-                                    .create().show();
-                            PaymentsAdapter paymentsAdapter = new PaymentsAdapter(view.getContext(), DebtsActivity.dbGetFilteredPayments(DatabaseHelper.PAYMENTS_COL_1, d.getDebtID()));
+                                    .setTitle("Payments");
+
+                            Payment[] paymentsArray = DebtsActivity.dbGetFilteredPayments(DatabaseHelper.PAYMENTS_COL_1, d.getDebtID());
+                            if (paymentsArray.length != 0) alertDialogBuilder.setView(paymentsView);
+                            else {
+                                TextView myMsg = new TextView(paymentsView.getContext());
+                                myMsg.setText("No payments made yet.");
+                                myMsg.setGravity(Gravity.CENTER);
+                                alertDialogBuilder.setView(myMsg);
+                            }
+                            alertDialogBuilder.create().show();
+                            PaymentsAdapter paymentsAdapter = new PaymentsAdapter(view.getContext(), paymentsArray);
                             recyclePay.setAdapter(paymentsAdapter);
                             LinearLayoutManager manager = new LinearLayoutManager(view.getContext());
                             recyclePay.setLayoutManager(manager);

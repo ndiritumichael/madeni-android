@@ -11,6 +11,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -256,10 +257,18 @@ public class OwedToYouAdapter extends RecyclerView.Adapter<OwedToYouAdapter.MyVi
                                 }
                             })
                                     .setNegativeButton("CLOSE", null)
-                                    .setTitle("Payments")
-                                    .setView(paymtsView)
-                                    .create().show();
-                            PaymentsAdapter paymentsAdapter = new PaymentsAdapter(view.getContext(), DebtsActivity.dbGetFilteredPayments(DatabaseHelper.PAYMENTS_COL_1, d.getDebtID()));
+                                    .setTitle("Payments");
+
+                            Payment[] paymentsArray = DebtsActivity.dbGetFilteredPayments(DatabaseHelper.PAYMENTS_COL_1, d.getDebtID());
+                            if (paymentsArray.length != 0) alertDialogBuilder.setView(paymtsView);
+                            else {
+                                TextView myMsg = new TextView(paymtsView.getContext());
+                                myMsg.setText("No payments made yet.");
+                                myMsg.setGravity(Gravity.CENTER);
+                                alertDialogBuilder.setView(myMsg);
+                            }
+                            alertDialogBuilder.create().show();
+                            PaymentsAdapter paymentsAdapter = new PaymentsAdapter(view.getContext(), paymentsArray);
                             recyclePay.setAdapter(paymentsAdapter);
                             LinearLayoutManager manager = new LinearLayoutManager(view.getContext());
                             recyclePay.setLayoutManager(manager);
