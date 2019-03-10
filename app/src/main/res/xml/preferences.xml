@@ -135,20 +135,22 @@
         android:key="backupSync"
         android:icon="?pref_backup_icon">
         <PreferenceCategory
-            android:title="Device">
+            android:title="Device Backup">
             <Preference
                 android:title="Backup Now"
                 android:key="deviceBackupNow"
-                android:summary="Back up database to device."/>
+                android:summary="Back up database to device."
+                android:enabled="false"/>
 
             <Preference
                 android:title="Restore Device Backup"
                 android:key="deviceRestore"
-                android:summary="Restore backed up data."/>
+                android:summary="Restore backed up data."
+                android:enabled="false"/>
         </PreferenceCategory>
 
         <PreferenceCategory
-            android:title="Online">
+            android:title="Online Backup">
             <Preference
                 android:title="Backup Now"
                 android:key="cloudBackupNow"
@@ -159,6 +161,21 @@
                 android:title="Restore Cloud Backup"
                 android:key="cloudRestore"
                 android:summary="Restore backed up data."
+                android:enabled="false"/>
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:title="Sync">
+            <Preference
+                android:title="Sync Now"
+                android:key="syncNow"
+                android:summary="Sync database to the cloud."
+                android:enabled="false"/>
+
+            <Preference
+                android:title="Delete Synced Data"
+                android:key="cloudRestore"
+                android:summary="Delete all synced data from the cloud."
                 android:enabled="false"/>
         </PreferenceCategory>
     </PreferenceScreen>
