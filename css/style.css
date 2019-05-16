@@ -1,3 +1,11 @@
+section.contact ul.list-social li.social-telegram a {
+  background-color: #0088cc;
+}
+
+section.contact ul.list-social li.social-telegram a:hover {
+  background-color: #0088cc;
+}
+
 section.contact ul.list-social li.social-reddit a {
   background-color: #ff4500;
 }
@@ -19,5 +27,5 @@ section.contact ul.list-social li.social-mail a {
 }
 
 section.contact ul.list-social li.social-mail a:hover {
-  background-color: #d73925;
+  background-color: #dd4b39;
 }
