@@ -9,19 +9,19 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper{
     static final String DATABASE_NAME = "MadeniDB";
     private static final int DATABASE_VERSION = 1;
-    static final String DEBTS_TABLE_NAME = "debts_table";
-    static final String PAYMENTS_TABLE_NAME = "payments_table";
+    public static final String DEBTS_TABLE_NAME = "debts_table";
+    public static final String PAYMENTS_TABLE_NAME = "payments_table";
 
     static final String DEBTS_COL_0 = "ID";
     static final String DEBTS_COL_1 = "NAME";
     static final String DEBTS_COL_2 = "PHONE";
     static final String DEBTS_COL_3 = "AMOUNT";
     static final String DEBTS_COL_4 = "DESCRIPTION";
-    static final String DEBTS_COL_5 = "TYPE";
+    public static final String DEBTS_COL_5 = "TYPE";
     static final String DEBTS_COL_6 = "DATE";
 
     static final String PAYMENTS_COL_0 = "ID";
-    static final String PAYMENTS_COL_1 = "DEBT";
+    public static final String PAYMENTS_COL_1 = "DEBT";
     static final String PAYMENTS_COL_2 = "AMOUNT";
     static final String PAYMENTS_COL_3 = "DATE";
 

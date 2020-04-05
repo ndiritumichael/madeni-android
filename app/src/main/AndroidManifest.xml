@@ -18,7 +18,7 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Splash"
+            android:name=".views.Splash"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -44,7 +44,7 @@
                 android:value="com.typicalgeek.madeni.MainActivity"/>
         </activity>
         <activity
-            android:name=".RecoveryActivity"
+            android:name=".views.RecoveryActivity"
             android:label="@string/title_activity_recovery"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
@@ -72,7 +72,7 @@
             android:theme="@style/AppTheme.NoActionBar.BlendStatusBar">
         </activity>
         <activity
-            android:name=".SummaryActivity"
+            android:name=".views.SummaryActivity"
             android:label="@string/title_activity_summary"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

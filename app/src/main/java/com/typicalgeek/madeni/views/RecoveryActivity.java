@@ -1,17 +1,20 @@
-package com.typicalgeek.madeni;
+package com.typicalgeek.madeni.views;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.typicalgeek.madeni.PasscodeActivity;
+import com.typicalgeek.madeni.R;
 
 public class RecoveryActivity extends AppCompatActivity {
     EditText etRecovery, etNewPass;

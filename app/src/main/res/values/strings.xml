@@ -78,69 +78,70 @@
 
     <!-- HelpActivity -->
     <string name="title_activity_help">Help</string>
-    <string name="help_text">
-        "<b>Madeni App.\n</b>"
-        "So that you don't have to keep track of your own debts anymore.\n\n"
+        <!--<string name="""<b>Madeni App.\n</b>"-->
+   <!-- <string name="help_text">-->
+    <!-- <string name="help_text">
+         "So that you don't have to keep track of your own debts anymore.\n\n"
 
-        "<u><i>Madeni</i></u> - which translates to 'debts' in Swahili - is the name of this "
-        "must-have tool. Presented in stunning detail with a clean material design interface, this "
-        "app helps you keep track of debts you owe and are owed. You don't have to remember each of"
-        " your debts anymore. Madeni will do that for you.\n\n"
+         "<u><i>Madeni</i></u> - which translates to \'debts\' in Swahili - is the name of this "
+         "must-have tool. Presented in stunning detail with a clean material design interface, this "
+         "app helps you keep track of debts you owe and are owed. You don't have to remember each of"
+         " your debts anymore. Madeni will do that for you.\n\n"
 
-        "<b><i>How to use the app.\n</i></b>"
-        "Acquaint yourself with the features of Madeni.\n\n"
+         "<b><i>How to use the app.\n</i></b>"
+         "Acquaint yourself with the features of Madeni.\n\n"
 
-        "<b>The Home Screen.\n\n</b>"
+         "<b>The Home Screen.\n\n</b>"
 
-        "The Home Screen is the first screen seen upon opening the app. On it, you can see a brief"
-        "overview of your debts - presented as cards -  without having to go too far into the app."
-        "This shows information drawn from your stored debts and is designed to be understood at a"
-        "glance. This can be refreshed by using the button at the bottom-right corner of the"
-        "screen or swiping downwards. The rest of the app can be accessed by clicking on the cards"
-        "or via the navigation drawer - accessed by swiping out from the left side of the screen.\n\n"
+         "The Home Screen is the first screen seen upon opening the app. On it, you can see a brief"
+         "overview of your debts - presented as cards -  without having to go too far into the app."
+         "This shows information drawn from your stored debts and is designed to be understood at a"
+         "glance. This can be refreshed by using the button at the bottom-right corner of the"
+         "screen or swiping downwards. The rest of the app can be accessed by clicking on the cards"
+         "or via the navigation drawer - accessed by swiping out from the left side of the screen.\n\n"
 
-        "<b><i>1. New Debt.\n\n</i></b>"
+         "<b><i>1. New Debt.\n\n</i></b>"
 
-        "On this page, you can store a new debt by filling the given fields with the relevant data"
-        "and clicking the button at the bottom-right of the screen to store the debt. You will be"
-        "notified on the success or failure of the operation.\n\n"
+         "On this page, you can store a new debt by filling the given fields with the relevant data"
+         "and clicking the button at the bottom-right of the screen to store the debt. You will be"
+         "notified on the success or failure of the operation.\n\n"
 
-        "<b><i>2. View Debts.\n\n</i></b>"
+         "<b><i>2. View Debts.\n\n</i></b>"
 
-        "On this page you can manage your stored debts. From here you have the ability to view,"
-        "edit, and delete debts. You can choose between three views; All Debts, Debts You Owe and"
-        "Debts owed to you. It can be refreshed by swiping downwards or clicking the button in the"
-        "bottom-right corner of the screen.\n\n"
+         "On this page you can manage your stored debts. From here you have the ability to view,"
+         "edit, and delete debts. You can choose between three views; All Debts, Debts You Owe and"
+         "Debts owed to you. It can be refreshed by swiping downwards or clicking the button in the"
+         "bottom-right corner of the screen.\n\n"
 
-        "<b><i>3. Debt Summary.\n\n</i></b>"
+         "<b><i>3. Debt Summary.\n\n</i></b>"
 
-        "On this page you are treated to a brief summary based on your stored debts similar to"
-        "that on the Home Screen. However, this one is more detailed and provides a more in-depth"
-        "look at the status of your debts. Like the Home Screen, it can be refreshed by swiping"
-        "downwards or clicking the button in the bottom-right corner of the screen.\n\n"
+         "On this page you are treated to a brief summary based on your stored debts similar to"
+         "that on the Home Screen. However, this one is more detailed and provides a more in-depth"
+         "look at the status of your debts. Like the Home Screen, it can be refreshed by swiping"
+         "downwards or clicking the button in the bottom-right corner of the screen.\n\n"
 
-        "<b><i>4. Help.\n\n"</i></b>
+         "<b><i>4. Help.\n\n"</i></b>
 
-        "On this page you get a description of the app and a brief guide on its features. Press"
-        "the button near the top to send feedback to the developer via e-mail.\n\n"
+         "On this page you get a description of the app and a brief guide on its features. Press"
+         "the button near the top to send feedback to the developer via e-mail.\n\n"
 
-        "<b><i>Preferences.\n\n</i></b>"
+         "<b><i>Preferences.\n\n</i></b>"
 
-        "On this page, accessed from a menu on the top-right of the each screen, you can "
-        "change the various app settings.\n\n"
+         "On this page, accessed from a menu on the top-right of the each screen, you can "
+         "change the various app settings.\n\n"
 
-        "<b>Communicate.\n</b>"
-        "This sub-menu contains social options with regard to the app.\n\n"
+         "<b>Communicate.\n</b>"
+         "This sub-menu contains social options with regard to the app.\n\n"
 
-        "<b><i>5. Share.\n\n</i></b>"
+         "<b><i>5. Share.\n\n</i></b>"
 
-        "This option enables you to share the download link for this app with others via various"
-        "apps you may have installed on your device.\n\n"
+         "This option enables you to share the download link for this app with others via various"
+         "apps you may have installed on your device.\n\n"
 
-        "<b><i>6. Send Feedback.\n\n</i></b>"
+         "<b><i>6. Send Feedback.\n\n</i></b>"
 
-        "This option allows you to send feedback to the developer via e-mail.\n\n"
-    </string>
+         "This option allows you to send feedback to the developer via e-mail.\n\n"
+     </string>-->
 
     <!-- Share -->
     <string name="str_app_description"><b><i>Madeni App;</i></b>\nSo that you don\'t have to keep track of your own debts anymore.\nGet it here:\n%s</string>
@@ -170,5 +171,7 @@
     <string name="shortcut_label_long">Create a new debt</string>
     <string name="shortcut_label_short">New debt</string>
     <string name="edition">prerelease-beta</string>
-    <string name="str_restore_backups">If you have any previous Madeni backups stored on this device, you can restore them here. You can also later restore them manually, but be warned that doing so will clear your current database.</string>
+    <string name="str_restore_backups">If you have any previous Madeni backups stored on this device, you can restore them here.You can also later restore them manually, but be warned that doing so will clear your current database.</string>
+
+
 </resources>

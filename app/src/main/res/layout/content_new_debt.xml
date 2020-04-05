@@ -12,7 +12,7 @@
     tools:showIn="@layout/activity_new_debt"
     android:weightSum="1">
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -25,9 +25,9 @@
             android:textSize="16sp"
             android:hint="@string/person_s_name"
             android:inputType="textPersonName"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -40,9 +40,9 @@
             android:textSize="16sp"
             android:hint="@string/phone_number_07"
             android:inputType="number"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -55,7 +55,7 @@
             android:textSize="16sp"
             android:hint="@string/amount_owed"
             android:inputType="numberDecimal"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
         android:id="@+id/descriptionSpinner"
@@ -67,7 +67,7 @@
         android:entries="@array/descriptionSpinnerArray"
         android:popupBackground="?attr/backColor"/>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
             android:textSize="16sp"
             android:hint="@string/debt_description"
             android:inputType="textMultiLine"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
         android:id="@+id/debtTypeSpinner"

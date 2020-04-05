@@ -5,11 +5,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.provider.CalendarContract;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -105,7 +105,7 @@ public class AllDebtsAdapter extends RecyclerView.Adapter<AllDebtsAdapter.MyView
                                                     thisDay = Integer.parseInt(new SimpleDateFormat("dd", Locale.getDefault()).format(new Date()));
                                                     thisMonth = Integer.parseInt(new SimpleDateFormat("MM", Locale.getDefault()).format(new Date()));
                                                     thisYear = Integer.parseInt(new SimpleDateFormat("yyyy", Locale.getDefault()).format(new Date()));
-                                                    new android.support.v7.app.AlertDialog.Builder(new ContextThemeWrapper(view.getContext(), DebtsActivity.dialogThemeID))
+                                                    new androidx.appcompat.app.AlertDialog.Builder(new ContextThemeWrapper(view.getContext(), DebtsActivity.dialogThemeID))
                                                             .setTitle("Add Reminder")
                                                             .setView(remView)
                                                             .setPositiveButton("ADD AND SAVE", new DialogInterface.OnClickListener() {

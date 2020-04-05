@@ -4,14 +4,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.typicalgeek.madeni.views.RecoveryActivity;
 
 public class PasscodeActivity extends AppCompatActivity {
     Button btnHint, btnForgot;
@@ -72,7 +74,7 @@ public class PasscodeActivity extends AppCompatActivity {
                 }else if (finalStrSecurityAnswer.equals("")) {
                     Toast.makeText(PasscodeActivity.this, "Security question has no answer.", Toast.LENGTH_SHORT).show();
                 } else {
-                    startActivity(new Intent(PasscodeActivity.this,RecoveryActivity.class));
+                    startActivity(new Intent(PasscodeActivity.this, RecoveryActivity.class));
                     finish();
                 }
             }

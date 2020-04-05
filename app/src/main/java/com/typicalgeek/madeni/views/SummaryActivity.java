@@ -1,20 +1,25 @@
-package com.typicalgeek.madeni;
+package com.typicalgeek.madeni.views;
 
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.typicalgeek.madeni.DatabaseHelper;
+import com.typicalgeek.madeni.MainActivity;
+import com.typicalgeek.madeni.PreferencesActivity;
+import com.typicalgeek.madeni.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;

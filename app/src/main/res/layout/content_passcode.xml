@@ -16,7 +16,7 @@
         android:layout_height="0dp"
         android:layout_centerInParent="true"/>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPasscode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             android:textIsSelectable="false"
             android:hint="@string/enter_your_passcode"
             android:inputType="numberPassword" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnHint"
@@ -51,7 +51,7 @@
         android:textColor="?colorAccent"
         android:text="@string/hint"/>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/card_forgot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
                 android:text="@string/forgot_passcode"
                 android:textColor="?colorAccent"/>
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>

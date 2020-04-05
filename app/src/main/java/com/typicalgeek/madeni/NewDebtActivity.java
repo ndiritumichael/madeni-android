@@ -16,14 +16,14 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.CalendarContract;
 import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.res.ResourcesCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -105,7 +105,7 @@ public class NewDebtActivity extends AppCompatActivity {
                         final View remView = inflater.inflate(R.layout.layout_reminder,
                                 (ViewGroup) view.getParent(), false);
                         final CalendarView calendarView = remView.findViewById(R.id.calendarViewReminder);
-                        new android.support.v7.app.AlertDialog.Builder(new ContextThemeWrapper(NewDebtActivity.this, layout))
+                        new androidx.appcompat.app.AlertDialog.Builder(new ContextThemeWrapper(NewDebtActivity.this, layout))
                                 .setTitle("Add Reminder")
                                 .setView(remView)
                                 .setPositiveButton("ADD AND SAVE", new DialogInterface.OnClickListener() {
@@ -243,7 +243,7 @@ public class NewDebtActivity extends AppCompatActivity {
     }
 
     public void drastic(){
-        new android.support.v7.app.AlertDialog.Builder(new ContextThemeWrapper(NewDebtActivity.this, layout))
+        new androidx.appcompat.app.AlertDialog.Builder(new ContextThemeWrapper(NewDebtActivity.this, layout))
                 .setTitle("Operation Failed")
                 .setMessage("Your attempt to save a debt failed. Would you like to contact the developer?")
                 .setPositiveButton("YES", new DialogInterface.OnClickListener() {
